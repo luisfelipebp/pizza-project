@@ -1,0 +1,47 @@
+$main-color: #fac564;
+
+.bg-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: url("../../images/bg_4.jpg") center center;
+  background-size: cover;
+}
+
+.image-about {
+  background: url("../../images/about.jpg") center center;
+  background-size: cover;
+}
+
+.about-text {
+  padding: 100px 50px 100px 50px;
+}
+.about-text h1 {
+  font-size: 38px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.about-text h1 span {
+  color: $main-color;
+}
+
+.detail-about img {
+  max-width: 40px;
+  margin-left: 20px;
+}
+
+.about-text p {
+  color: #878787;
+  font-size: 19px;
+}
+
+.about-text h1 {
+  color: white;
+}
+
+@media (max-width: 911px) {
+  .bg-about {
+    grid-template-columns: 1fr;
+  }
+  .image-about {
+    height: 350px;
+  }
+}

@@ -1,0 +1,121 @@
+$main-color: #fac564;
+@mixin flex-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bg-header {
+  background: #121618;
+  padding: 25px;
+}
+
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include flex-base;
+}
+
+.nav-header ul {
+  list-style: none;
+  @include flex-base;
+  gap: 30px;
+}
+
+.nav-header ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #a3adb5;
+  text-decoration: none;
+}
+
+.nav-header ul li a:hover {
+  color: $main-color;
+}
+
+.btn-mobile {
+  display: block;
+  background: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-top: 4px solid;
+  margin: 20px 20px 0 0;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+}
+
+.btn-mobile {
+  display: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-top: 4px solid;
+  margin: 20px 20px 0 0;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+}
+
+.btn-mobile::after,
+.btn-mobile::before {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: 6px;
+  background: currentColor;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.btn-mobile.active {
+  border-top-color: transparent;
+}
+
+.btn-mobile.active::after {
+  margin-top: 0px;
+  top: 2px;
+  transform: rotate(45deg);
+}
+
+.btn-mobile.active::before {
+  margin-top: 0px;
+  top: 6px;
+  transform: rotate(135deg);
+}
+
+.container-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+  color: white;
+  ul {
+    padding: 0;
+  }
+  ul li {
+    list-style: none;
+    padding-bottom: 30px;
+    a {
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+  ul li a:hover {
+    color: #fac564;
+  }
+}
+
+@media (max-width: 906px) {
+  .nav-header {
+    display: none;
+  }
+  .btn-mobile {
+    display: block;
+  }
+}

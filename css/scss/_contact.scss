@@ -1,0 +1,68 @@
+.bg-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: black;
+}
+
+.map-contact {
+  background: url("../../images/map.jpg") center center;
+  background-size: cover;
+}
+
+.form-contact {
+  padding: 130px 50px 130px 50px;
+  color: white;
+  max-width: 800px;
+  button {
+    padding: 25px;
+    background: #fac564;
+    border: none;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+  button:hover {
+    background: none;
+    padding: 23px;
+    border: 2px solid #fac564;
+    color: #fac564;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 50px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    input,
+    textarea {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #878787;
+      padding-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      color: white;
+    }
+    textarea:focus,
+    input:focus {
+      box-shadow: 0 0 0 0;
+      outline: 0;
+    }
+  }
+}
+
+@media (max-width: 906px) {
+  .bg-contact {
+    grid-template-columns: 1fr;
+  }
+  .map-contact {
+    height: 550px;
+  }
+}

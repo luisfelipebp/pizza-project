@@ -1,0 +1,42 @@
+@import "header";
+@import "main";
+@import "local";
+@import "about";
+@import "services";
+@import "menu";
+@import "gallery";
+@import "tabmenu";
+@import "contact";
+@import "footer";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.active {
+  display: block;
+}
+
+.disabled {
+  display: none;
+}
+
+// .scrollAnime {
+//   display: none;
+// }
+
+.scrollTop {
+  opacity: 0;
+  transform: translate3d(0, -50px, 0);
+  transition: 0.3s;
+}
+
+.scrollTop.animate {
+  opacity: 1;
+
+  transform: translate3d(0, 0, 0);
+}

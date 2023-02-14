@@ -1,0 +1,126 @@
+$main-color: #fac564;
+
+.bg-tabmenu {
+  background: url("../../images/bg_4.jpg") center center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  ul {
+    margin: 0;
+  }
+  .image-tabmenu {
+    background: url("../../images/about.jpg") center center;
+    background-size: cover;
+  }
+}
+
+.container-tabmenu {
+  padding: 50px 50px 100px 50px;
+  .items-tabmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 50px;
+    animation: showContainer 0.5s forwards;
+  }
+  .nav-tabmenu ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    li button {
+      background: none;
+      padding: 15px;
+      font-size: 19px;
+      border: 2px solid $main-color;
+      color: $main-color;
+      font-family: "Montserrat", sans-serif;
+    }
+    li button:hover {
+      background: $main-color;
+      color: black;
+    }
+  }
+  img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  div {
+    text-align: center;
+    h2 {
+      color: white;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 26px;
+    }
+    p {
+      color: #878787;
+      font-size: 17px;
+    }
+    span {
+      color: $main-color;
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 15px 10px 15px;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+    }
+    button:hover {
+      background: $main-color;
+      border: none;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .bg-tabmenu {
+    grid-template-columns: 1fr;
+  }
+  .image-tabmenu {
+    height: 350px;
+  }
+}
+
+@media (max-width: 906px) {
+  .items-tabmenu {
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .nav-tabmenu ul {
+    flex-direction: column;
+    max-width: 100%;
+    button {
+      width: 250px;
+    }
+  }
+}
+
+.container-tabmenu .nav-tabmenu ul li button.active-btn {
+  background: $main-color;
+  color: black;
+  cursor: pointer;
+}
+
+@keyframes showContainer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
