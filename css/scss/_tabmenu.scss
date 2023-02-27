@@ -14,6 +14,19 @@ $main-color: #fac564;
   }
 }
 
+.bg-tabmenu-page {
+  background: black;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  ul {
+    margin: 0;
+  }
+  .image-tabmenu {
+    background: url("../../images/about.jpg") center center;
+    background-size: cover;
+  }
+}
+
 .container-tabmenu {
   padding: 50px 50px 100px 50px;
   .items-tabmenu {
@@ -85,7 +98,8 @@ $main-color: #fac564;
 }
 
 @media (max-width: 1150px) {
-  .bg-tabmenu {
+  .bg-tabmenu,
+  .bg-tabmenu-page {
     grid-template-columns: 1fr;
   }
   .image-tabmenu {

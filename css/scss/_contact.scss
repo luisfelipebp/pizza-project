@@ -9,7 +9,8 @@
   background-size: cover;
 }
 
-.form-contact {
+.form-contact,
+.contact-container {
   padding: 130px 50px 130px 50px;
   color: white;
   max-width: 800px;
@@ -64,5 +65,40 @@
   }
   .map-contact {
     height: 550px;
+  }
+}
+
+.bg-page-contact {
+  background: url("../../images/bg_4.jpg") center center;
+  background-size: cover;
+  h2 {
+    margin: 0;
+  }
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 150px 0 150px 0;
+
+  h2 {
+    color: white;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  p {
+    color: white;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+  span {
+    color: #fac564;
+  }
+  .span-grey {
+    color: #878787;
   }
 }

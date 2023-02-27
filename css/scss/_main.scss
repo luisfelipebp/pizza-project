@@ -216,3 +216,32 @@ $color-subtext: #f3f3f3;
     height: auto;
   }
 }
+
+.list-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100px;
+  padding: 0;
+  margin: 0 auto;
+  li {
+    list-style: none;
+    a {
+      font-size: 14px;
+      font-weight: bold;
+      color: #878787;
+      text-decoration: none;
+    }
+    a.active-link {
+      color: #fff;
+    }
+  }
+}
+
+.welcome-text-pages {
+  text-align: center;
+  padding: 350px 0 150px 0;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
