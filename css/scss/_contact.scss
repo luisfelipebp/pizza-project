@@ -59,15 +59,6 @@
   }
 }
 
-@media (max-width: 906px) {
-  .bg-contact {
-    grid-template-columns: 1fr;
-  }
-  .map-contact {
-    height: 550px;
-  }
-}
-
 .bg-page-contact {
   background: url("../../images/bg_4.jpg") center center;
   background-size: cover;
@@ -79,6 +70,7 @@
 .contact-container {
   display: flex;
   align-items: center;
+
   justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
@@ -100,5 +92,25 @@
   }
   .span-grey {
     color: #878787;
+  }
+}
+
+@media (max-width: 906px) {
+  .bg-contact {
+    grid-template-columns: 1fr;
+  }
+  .contact-container {
+    flex-direction: column;
+    gap: 80px;
+    text-align: center;
+    form {
+      padding: 0 15px 0 15px;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .map-contact {
+    height: 550px;
   }
 }
